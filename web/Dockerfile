@@ -7,6 +7,7 @@ RUN rm /etc/nginx/sites-enabled/default
 COPY mattermost /etc/nginx/sites-available/
 COPY mattermost-ssl /etc/nginx/sites-available/
 COPY letsencrypt /etc/nginx/sites-available/
+COPY dhparam.pem /etc/nginx/ssl/dhparam.pem
 ADD docker-entry.sh /
 
 RUN chmod +x /docker-entry.sh
